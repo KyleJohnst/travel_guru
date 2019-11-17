@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Station Outbound Trips viewer</p>
+    <p>Station Outbound Trips</p>
     <div>
       <div class="station_select">
         <label for="dep_station_code">Outbound Station</label>
@@ -60,7 +60,6 @@ export default {
     getData() {
         let depart = this.dep_station_code.toLowerCase();
         this.loading = true;
-        console.log(apiData);
         
       fetch(
           "https://transportapi.com/v3/uk/train/station/"+ depart +"/"+ this.date +"/"+ this.time +"/timetable.json?app_id="+ apiData.app_id +"&app_key="+ apiData.app_key +"&train_status=passenger"
